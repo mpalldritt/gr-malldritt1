@@ -1,6 +1,6 @@
-BPSK Flow graph modulation updated on 18/12/2025
+BPSK and BFSK Flow graph modulation updated on 18/12/2025
 
-GRC BPSK software, tested on Windows 11 laptop with radiocanda and GNU Radio 3.10.10
+GRC BFSK and BPSK software, tested on Windows 11 laptop with radiocanda and GNU Radio 3.10.10
 
 The 9 files attached are as follows
 1. GRC file to run in GNU radio
