@@ -35,6 +35,20 @@ The experiments focus on:
 
 ## Repository Structure
 
+gr-malldritt1/
+├── flowgraphs/
+│ ├── fsk/
+│ │ ├── tx/ # BFSK transmitter flow graphs
+│ │ ├── rx/ # BFSK receiver flow graphs
+│ │ └── figures/ # Example TX/RX display outputs
+│ └── psk/
+│ ├── versions/ # Versioned BPSK flow graphs (dated)
+│ └── figures/ # Constellation and spectrum plots
+├── docs/
+│ └── experiment_notes.md
+└── images/
+
+
 
 `BPSK and BFSK Flow graph modulation updated on 18/12/2025
 
