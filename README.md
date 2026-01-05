@@ -1,10 +1,47 @@
+# gr-malldritt1 — Acoustic SDR Flow Graphs (FSK / PSK)
+
+This repository contains GNU Radio software-defined radio (SDR) flow graphs,
+supporting scripts, and example outputs used in the experimental evaluation
+of acoustic digital communication systems described in the associated journal
+publication.
+
+The materials provided here enable replication and verification of the
+modulation, transmission, and reception techniques reported in the paper.
+
+---
+
+## Overview
+
+The repository includes packet-based **BFSK** and **BPSK** modulation flow graphs
+implemented using GNU Radio Companion (GRC). These flow graphs were developed
+and tested for acoustic communication experiments in challenging propagation
+environments, including highly reflective and multipath media.
+
+The experiments focus on:
+- Packet-based transmission and reception
+- Baseband and passband signal analysis
+- Constellation, spectrum, and correlation visualisation
+- Operation around a 40 kHz acoustic carrier
+
+---
+
+## Software Environment
+
+- GNU Radio: **3.10.10**
+- Operating System: **Windows 11**
+- Audio interface: Sound-card based (192 kHz sample rate)
+
+---
+
+## Repository Structure
+
+
 `BPSK and BFSK Flow graph modulation updated on 18/12/2025
 
 GRC BFSK and BPSK software, tested on Windows 11 laptop with radiocanda and GNU Radio 3.10.10
 
 
 gr-malldritt1 PSK
-README.md contains notes for the repository
 PSK Baseband, Constellation and IO Correlation Graphs.jpg	          PSK Display Graphs using this GRC software
 PSK Passband RX Spectrum and Output bandwidth centered at 40khz.jpg	PSK Display Graphs using this GRC software
 PSK Passband TX Spectrum and Transmit Data.jpg	                    PSK Display Graphs using this GRC software
@@ -21,7 +58,6 @@ Baseband graph and Constellation 19122025.jpg		                    PSK modulatio
 		
  
 gr-malldritt1 FSK
-README.md contains notes for the repository
 RX display graph.jpg	    FSK Display Graphs using this GRC software
 TX display graph.jpg	    FSK Display Graphs using this GRC software
 pkt_fsk_rcv.grc	          FSK modulation protocol
