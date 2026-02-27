@@ -1,0 +1,50 @@
+id: mpchannel
+label: Multipath Channel for Steel Wood Air
+category: '[GRC Hier Blocks]'
+
+parameters:
+-   id: air
+    label: Air
+    dtype: real
+    default: '0'
+    hide: none
+-   id: samp_rate
+    label: Samp_rate
+    dtype: real
+    default: '0'
+    hide: none
+-   id: steel
+    label: Steel
+    dtype: real
+    default: '0'
+    hide: none
+-   id: wood
+    label: Wood
+    dtype: real
+    default: '0'
+    hide: none
+
+inputs:
+-   label: sig_in
+    dtype: float
+    vlen: 1
+
+outputs:
+-   label: sig_out
+    dtype: float
+    vlen: 1
+
+templates:
+    imports: 'from mpchannel import mpchannel  # grc-generated hier_block'
+    make: "mpchannel(\n    air=${ air },\n    samp_rate=${ samp_rate },\n    steel=${\
+        \ steel },\n    wood=${ wood },\n)"
+    callbacks:
+    - set_air(${ air })
+    - set_samp_rate(${ samp_rate })
+    - set_steel(${ steel })
+    - set_wood(${ wood })
+
+documentation: /home/parallels/Documents/GRC/FE_SDR/fesdr-examples-vol3/ch5/mpchannel.py
+grc_source: /home/parallels/Documents/GRC/FE_SDR/fesdr-examples-vol3/ch5/mp-channel.grc
+
+file_format: 1

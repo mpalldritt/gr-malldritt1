@@ -1,0 +1,66 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<?grc format='1' created='3.7.9'?>
+<flow_graph>
+  <timestamp>Sat Jul 12 13:50:53 2014</timestamp>
+<block>
+  <name>e_canal_BER</name>
+  <key>SERcurvas2_e_canal_BER</key>
+  <category>[SERcurvas2]</category>
+  <import>import SERcurvas2</import>
+  <make>SERcurvas2.e_canal_BER($N, $EsN0min, $EsN0max,$B,$Rs)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>N</name>
+    <key>N</key>
+    <type>int</type>
+  </param>
+
+<param>
+    <name>EsN0min</name>
+    <key>EsN0min</key>
+    <type>raw</type>
+  </param>
+
+<param>
+    <name>EsN0max</name>
+    <key>EsN0max</key>
+    <type>raw</type>
+  </param>
+<param>
+    <name>B</name>
+    <key>B</key>
+    <type>raw</type>
+  </param>
+<param>
+    <name>Rs</name>
+    <key>Rs</key>
+    <type>raw</type>
+  </param>
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>in0</name>
+    <type>complex</type>
+  </sink>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>out0</name>
+    <type>complex</type>
+  </source>
+<source>
+    <name>out1</name>
+    <type>int</type>
+  </source>
+</block>

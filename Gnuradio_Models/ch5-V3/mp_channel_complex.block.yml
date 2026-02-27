@@ -1,0 +1,76 @@
+id: mp_channel_complex
+label: MP Channel hier block
+category: '[GRC Hier Blocks]'
+
+parameters:
+-   id: air_gain
+    label: Air Gain
+    dtype: raw
+    default: '0'
+    hide: none
+-   id: air_velocity
+    label: Air velocity
+    dtype: raw
+    default: '340'
+    hide: none
+-   id: path_length
+    label: Pth Length
+    dtype: raw
+    default: '1'
+    hide: none
+-   id: samp_rate
+    label: Sample Rate
+    dtype: raw
+    default: '0'
+    hide: none
+-   id: steel_gain
+    label: Steel Gain
+    dtype: raw
+    default: '0'
+    hide: none
+-   id: steel_velocity
+    label: Steel velocity
+    dtype: raw
+    default: '5000'
+    hide: none
+-   id: wood_gain
+    label: Wood Gain
+    dtype: raw
+    default: '0'
+    hide: none
+-   id: wood_velocity
+    label: Wood velocity
+    dtype: raw
+    default: '3000'
+    hide: none
+
+inputs:
+-   label: in
+    dtype: complex
+    vlen: 1
+
+outputs:
+-   label: out
+    dtype: complex
+    vlen: 1
+
+templates:
+    imports: 'from mp_channel_complex import mp_channel_complex  # grc-generated hier_block'
+    make: "mp_channel_complex(\n    air_gain=${ air_gain },\n    air_velocity=${ air_velocity\
+        \ },\n    path_length=${ path_length },\n    samp_rate=${ samp_rate },\n \
+        \   steel_gain=${ steel_gain },\n    steel_velocity=${ steel_velocity },\n\
+        \    wood_gain=${ wood_gain },\n    wood_velocity=${ wood_velocity },\n)"
+    callbacks:
+    - set_air_gain(${ air_gain })
+    - set_air_velocity(${ air_velocity })
+    - set_path_length(${ path_length })
+    - set_samp_rate(${ samp_rate })
+    - set_steel_gain(${ steel_gain })
+    - set_steel_velocity(${ steel_velocity })
+    - set_wood_gain(${ wood_gain })
+    - set_wood_velocity(${ wood_velocity })
+
+documentation: /home/parallels/Documents/GRC/FE_SDR/fesdr-examples-vol3/ch5/mp_channel_complex.py
+grc_source: /home/parallels/Documents/GRC/FE_SDR/fesdr-examples-vol3/ch5/mp-channel-complex.grc
+
+file_format: 1
